@@ -13,7 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-[#F4F7FF]  min-h-screen flex flex-col  w-screen pt-6 overflow-x-hidden">
+<body class="bg-[#dadee9]  min-h-screen flex flex-col  w-screen pt-6 overflow-x-hidden">
    <!-- header section -->
 <header class="w-full max-w-[1536px]  h-[100px] bg-white rounded-2xl mx-auto p-5 overflow-hidden ">
     <nav class=" flex justify-between"> 
@@ -28,7 +28,7 @@
                         <h1 class="text-[#1e1e1e] text-3xl font-bold  tracking-wide ">23</h1>
             </div>
             <div class="w-16 h-16 bg-[#f4f7ff] rounded-[32px] items-center  flex justify-center">
-                  <img src="assets/theme-btn.png" alt="">
+                  <img src="assets/theme-btn.png" alt="" id="changeColor">
             </div>
          </div>
     </nav>
@@ -56,7 +56,7 @@
                 </div>
         
                 <!-- Second Box (Gradient Background) -->
-                <div class="w-[524px] h-32 bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] rounded-xl flex items-center justify-center">
+                <div id="anotherPage" class="w-[524px] h-32 bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] rounded-xl flex items-center justify-center">
                     <div class="flex items-center justify-center gap-6">
                         <img src="assets/board.png" alt="">
                         <h1 class="w-[298px] text-white text-2xl font-medium tracking-wide">Discover Something New Today!</h1>
@@ -363,7 +363,7 @@
 </main>
 
 
-
+<script src="js/script.js"></script>
 
 </body>
 </html>
