@@ -31,3 +31,37 @@ window.onload = liveDate;
 
 // button work
 
+const checkBox = document.getElementById("checkbox");
+const task = document.getElementById("taskAssign")
+const btns = document.querySelectorAll(".cmplete-btn");
+
+btns.forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        console.log("Button clicked");
+        if(event.target.classList.contains("cmplete-btn") && !event.target.disabled){
+            let taskCount = parseInt(task.innerText);
+            let ChecKbox = parseInt(checkBox.innerText);
+
+            if(taskCount > 0){
+                alert("Board updated successfully");
+                task.innerText = (taskCount - 1);
+                checkBox.innerText = ChecKbox + 1;
+                event.target.disabled = true;
+                event.target.style.backgroundColor = "gray";
+            }
+            let allDisabled = true;
+            for (let btn of btns) {
+                if (!btn.disabled) {
+                    allDisabled = false;
+                    break;
+                }
+            }
+
+            if (allDisabled) {
+                alert("You have completed all the tasks successfully");
+            }
+        }
+    });
+});
+
+
